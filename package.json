@@ -1,0 +1,52 @@
+{
+  "name": "xihe-cli",
+  "version": "0.1.0",
+  "description": "羲和 CLI - 羲和御日，温暖相伴",
+  "type": "module",
+  "bin": {
+    "xihe": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "dev": "node --loader ts-node/esm src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "lint": "eslint src/"
+  },
+  "keywords": [
+    "cli",
+    "ai",
+    "llm",
+    "agent"
+  ],
+  "author": "honchenc",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/honchenc/xihe-cli.git"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "ink": "^4.4.1",
+    "react": "^18.3.1",
+    "commander": "^12.1.0",
+    "chalk": "^5.3.0",
+    "open": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "typescript": "^5.7.0",
+    "esbuild": "^0.25.0",
+    "vitest": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0"
+  }
+}
